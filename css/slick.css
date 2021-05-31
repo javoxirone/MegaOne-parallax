@@ -1,0 +1,160 @@
+/* Слайдер */
+.slick-slider {}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {}
+
+/* Слайдер с точками */
+.slick-slider.slick-dotted {}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {}
+
+/* Слайд основной */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрелка */
+.slick-arrow {}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {}
+
+/* Точки (булиты) */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активная точка */
+.slick-dots li.slick-active {}
+
+/* Элемент точки */
+.slick-dots li button {}
+
+
+
+/*Конкретный слайдер*/
+
+.slider {
+    position: relative;
+    
+    height: 755px;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+    z-index: 10;
+	font-size: 0;
+	outline: none;
+}
+.slider .slick-arrow.slick-prev {
+	left: 225px;
+	background-image: url("../img/prev.png");
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	
+	
+}
+@media (max-width:305px){
+	.slider .slick-arrow.slick-prev {
+		left: 200px;
+		
+		
+		
+	}
+	.slider .slick-arrow.slick-next {
+		left: 235px!important;
+		
+	}
+
+ }
+.slider .slick-arrow.slick-next {
+	left: 265px;
+	background-image: url("../img/next.png");
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+}
+.slider__item {
+	outline: none	;
+}
+
+
+.slide1{
+	background-image: url("../img/slide1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 755px;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+	
+}
+.slide2{
+	background-image: url("../img/slide2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 755px;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+	
+}
+.slide3{
+	background-image: url("../img/slide3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 755px;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.slide4{
+	background-image: url("../img/slide4.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 755px;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+	
+}

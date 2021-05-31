@@ -1,0 +1,1742 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* fonts */
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url(../font/ProximaNovaBold.otf);
+}
+@font-face {
+  font-family: ProximaNovaRegular;
+  src: url(../font/ProximaNovaRegular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section.parallax-window {
+  min-height: 100vh;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.text {
+  margin-bottom: 33px;
+  color: white;
+}
+
+.btn-all {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 9px 34px;
+  border-radius: 50px;
+  border: 2.5px solid white;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-all:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+  color: #2b2b2b;
+}
+.btn-all:not(:hover) {
+  transition: all 0.5s ease;
+  background-color: transparent;
+  color: white;
+}
+
+.text {
+  width: 400px;
+}
+
+.slide4__article_btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 9px 34px;
+  border-radius: 50px;
+  border: 2.5px solid black;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+.slide4__article_btn:hover {
+  transition: all 0.5s ease;
+  background-color: black;
+  color: white;
+}
+.slide4__article_btn:not(:hover) {
+  transition: all 0.5s ease;
+  background-color: transparent;
+  color: black;
+}
+
+.home__button a {
+  width: 100%;
+  height: 100%;
+  background-color: #00bcd4;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000000;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  background-image: url("../img/home__button.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header.header {
+  background-color: white;
+  z-index: 100;
+  position: fixed;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+}
+@media (max-width: 1920000px) {
+  header.header .header__burger span {
+    display: none;
+  }
+  header.header .header__burger:before {
+    display: none;
+  }
+  header.header .header__burger:after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header.header .header__burger span {
+    display: block;
+  }
+  header.header .header__burger:before {
+    display: block;
+  }
+  header.header .header__burger:after {
+    display: block;
+  }
+}
+header.header .container .header__navbar {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.header .container .header__navbar .header__menu {
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+header.header .container .header__navbar .header__menu.active {
+  bottom: 0;
+}
+header.header .container .header__navbar .header__menu .header__feedback {
+  display: none;
+}
+header.header .container .header__navbar .header__menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.header .container .header__navbar .header__menu ul li {
+  font-size: 16px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header.header .container .header__navbar .header__menu ul li a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+@media (max-width: 1920000px) {
+  header.header .container .header__navbar .header__menu {
+    width: 650px;
+  }
+}
+@media (max-width: 767px) {
+  header.header .container .header__navbar .header__menu {
+    position: fixed;
+    z-index: 20;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 56px 80px;
+    background-color: rgba(1, 176, 206, 0.93);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  header.header .container .header__navbar .header__menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 65%;
+    width: 100%;
+    margin-top: 40px;
+  }
+  header.header .container .header__navbar .header__menu ul li {
+    font-size: 24px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header.header .container .header__navbar .header__menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+  header.header .container .header__navbar .header__menu .header__feedback {
+    display: flex;
+    justify-content: space-beween;
+    align-items: center;
+    flex-direction: column;
+  }
+  header.header .container .header__navbar .header__menu .header__feedback .header__feedback_icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  header.header .container .header__navbar .header__menu .header__feedback .header__feedback_address {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: white;
+  }
+}
+header.header .header__burger {
+  position: relative;
+  display: block;
+  min-width: 24px;
+  min-height: 20px;
+  z-index: 10000;
+}
+header.header .header__burger.active span {
+  transition: all 0.4s ease 0s;
+  transform: scale(0);
+  background-color: white;
+}
+header.header .header__burger.active:before {
+  transition: all 0.4s ease 0s;
+  transform: rotate(45deg);
+  top: 9px;
+  background-color: white;
+}
+header.header .header__burger.active:after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+  transition: all 0.4s ease 0s;
+  background-color: white;
+}
+header.header .header__burger:before {
+  content: "";
+  min-width: 100%;
+  min-height: 2px;
+  background-color: #2b2b2b;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  transition: all 0.4s ease 0s;
+}
+header.header .header__burger:after {
+  content: "";
+  min-width: 100%;
+  min-height: 2px;
+  background-color: #2b2b2b;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.4s ease 0s;
+}
+header.header .header__burger span {
+  min-width: 100%;
+  min-height: 2px;
+  background-color: #2b2b2b;
+  transition: all 0.4s ease 0s;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+main #home section.parallax-window {
+  min-height: 100vh;
+}
+@media (max-width: 991px) {
+  main #home section.parallax-window .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main #home section.parallax-window .container .home__article {
+  max-width: 690px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 1920000px) {
+  main #home section.parallax-window .container .home__article {
+    width: 540px;
+  }
+}
+@media (max-width: 991px) {
+  main #home section.parallax-window .container .home__article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 690px;
+  }
+}
+main #home section.parallax-window .container .home__article .home__article_title {
+  color: white;
+  font-size: 48px;
+  max-width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  main #home section.parallax-window .container .home__article .home__article_title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 342px) {
+  main #home section.parallax-window .container .home__article .home__article_title {
+    text-align: center;
+  }
+}
+main #home section.parallax-window .container .home__article .home__article_title strong {
+  font-weight: 700;
+  color: white;
+  font-size: 48px;
+}
+@media (max-width: 767px) {
+  main #home section.parallax-window .container .home__article .home__article_title strong {
+    font-size: 40px;
+  }
+}
+main #home section.parallax-window .container .home__article .home__article_text {
+  font-size: 16px;
+  color: white;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+main #home section.parallax-window .container .home__article .home__article_text p {
+  margin-bottom: 10px;
+  line-height: 30px;
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  main #home section.parallax-window .container .home__article .home__article_text p {
+    text-align: center;
+  }
+}
+main #home section.parallax-window .container .home__article .home__article_button {
+  margin-top: 13px;
+}
+main #services section.parallax-window {
+  min-height: 100vh;
+  padding: 0 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main #services section.parallax-window .container .services__block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  main #services section.parallax-window .container .services__block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  main #services section.parallax-window .container .services__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column1 {
+  max-height: 100%;
+  max-width: 100%;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column1 {
+    width: 270px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media (max-width: 991px) {
+  main #services section.parallax-window .container .services__block .services__column1 {
+    width: 345px;
+  }
+}
+@media (max-width: 767px) {
+  main #services section.parallax-window .container .services__block .services__column1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1 {
+  max-width: 100%;
+  max-height: 100%;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px 25px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column1 .services__block1 {
+    width: 250px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  main #services section.parallax-window .container .services__block .services__column1 .services__block1 {
+    width: 315px;
+    height: 225px;
+  }
+}
+@media (max-width: 767px) {
+  main #services section.parallax-window .container .services__block .services__column1 .services__block1 {
+    width: 450px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:hover .services__block1_img {
+  transition: all 0.5s ease;
+  background-color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:hover .services__block1_title {
+  transition: all 0.5s ease;
+  color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:hover .services__block1_article {
+  transition: all 0.5s ease;
+  color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:hover .services__block1_btn {
+  transition: all 0.5s ease;
+  background-image: url("../img/icon4.png");
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:not(:hover) {
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:not(:hover) .services__block1_img {
+  transition: all 0.5s ease;
+  background-color: #00bcd4;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:not(:hover) .services__block1_title {
+  transition: all 0.5s ease;
+  color: white;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1:not(:hover) .services__block1_article {
+  transition: all 0.5s ease;
+  color: #c8c6c9;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1 .services__block1_img {
+  min-width: 55px;
+  min-height: 55px;
+  background-color: #00bcd4;
+  border-radius: 50%;
+  background-image: url("../img/icon1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1 .services__block1_title {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 100%;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1 .services__block1_article {
+  font-family: "Roboto", sans-serif;
+  color: #c8c6c9;
+  font-size: 14px;
+  max-width: 100%;
+  font-weight: 300;
+  text-align: center;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column1 .services__block1 .services__block1_article {
+    text-align: left;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1 .services__block1_article p {
+  margin-bottom: 2px;
+}
+main #services section.parallax-window .container .services__block .services__column1 .services__block1 .services__block1_btn {
+  background-image: url("../img/icon5.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  min-width: 100%;
+  min-height: 20px;
+  margin-top: 15px;
+}
+main #services section.parallax-window .container .services__block .services__column2 {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: column;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2 {
+  max-width: 100%;
+  max-height: 100%;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px 25px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block2 {
+    width: 250px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block2 {
+    width: 315px;
+    height: 225px;
+  }
+}
+@media (max-width: 767px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block2 {
+    width: 450px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:hover .services__block2_img {
+  transition: all 0.5s ease;
+  background-color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:hover .services__block2_title {
+  transition: all 0.5s ease;
+  color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:hover .services__block2_article {
+  transition: all 0.5s ease;
+  color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:hover .services__block2_btn {
+  transition: all 0.5s ease;
+  background-image: url("../img/icon4.png");
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:not(:hover) {
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:not(:hover) .services__block2_img {
+  transition: all 0.5s ease;
+  background-color: #00bcd4;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:not(:hover) .services__block2_title {
+  transition: all 0.5s ease;
+  color: white;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2:not(:hover) .services__block2_article {
+  transition: all 0.5s ease;
+  color: #c8c6c9;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2 .services__block2_img {
+  min-width: 55px;
+  min-height: 55px;
+  background-color: #00bcd4;
+  border-radius: 50%;
+  background-image: url("../img/icon2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2 .services__block2_title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2 .services__block2_article {
+  font-family: "Roboto", sans-serif;
+  color: #c8c6c9;
+  font-size: 14px;
+  max-width: 100%;
+  font-weight: 300;
+  text-align: center;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block2 .services__block2_article {
+    text-align: left;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2 .services__block2_article p {
+  margin-bottom: 2px;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block2 .services__block2_btn {
+  background-image: url("../img/icon5.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  min-width: 100%;
+  min-height: 20px;
+  margin-top: 15px;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3 {
+  margin-top: 23px;
+  max-width: 100%;
+  max-height: 100%;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px 25px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block3 {
+    width: 250px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block3 {
+    width: 315px;
+    height: 225px;
+  }
+}
+@media (max-width: 767px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block3 {
+    width: 450px;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:hover .services__block3_img {
+  transition: all 0.5s ease;
+  background-color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:hover .services__block3_title {
+  transition: all 0.5s ease;
+  color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:hover .services__block3_article {
+  transition: all 0.5s ease;
+  color: #2b2b2b;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:hover .services__block3_btn {
+  transition: all 0.5s ease;
+  background-image: url("../img/icon4.png");
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:not(:hover) {
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:not(:hover) .services__block3_img {
+  transition: all 0.5s ease;
+  background-color: #00bcd4;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:not(:hover) .services__block3_title {
+  transition: all 0.5s ease;
+  color: white;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3:not(:hover) .services__block3_article {
+  transition: all 0.5s ease;
+  color: #c8c6c9;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3 .services__block3_img {
+  min-width: 55px;
+  min-height: 55px;
+  background-color: #00bcd4;
+  border-radius: 50%;
+  background-image: url("../img/icon3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3 .services__block3_title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3 .services__block3_article {
+  font-family: "Roboto", sans-serif;
+  color: #c8c6c9;
+  font-size: 14px;
+  max-width: 100%;
+  font-weight: 300;
+  text-align: center;
+}
+@media (max-width: 1920000px) {
+  main #services section.parallax-window .container .services__block .services__column2 .services__block3 .services__block3_article {
+    text-align: left;
+  }
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3 .services__block3_article p {
+  margin-bottom: 2px;
+}
+main #services section.parallax-window .container .services__block .services__column2 .services__block3 .services__block3_btn {
+  background-image: url("../img/icon5.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  min-width: 100%;
+  min-height: 20px;
+  margin-top: 15px;
+}
+main .services2 section.parallax-window {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  main .services2 section.parallax-window .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main .services2 section.parallax-window .container .services2__article {
+  max-width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 1920000px) {
+  main .services2 section.parallax-window .container .services2__article {
+    width: 412px;
+  }
+}
+@media (max-width: 991px) {
+  main .services2 section.parallax-window .container .services2__article {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  main .services2 section.parallax-window .container .services2__article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main .services2 section.parallax-window .container .services2__article .services2__article_title .article__title1 {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  main .services2 section.parallax-window .container .services2__article .services2__article_title .article__title1 {
+    text-align: center;
+  }
+}
+main .services2 section.parallax-window .container .services2__article .services2__article_title .article__title2 {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 500;
+}
+main .services2 section.parallax-window .container .services2__article .services2__article_title .article__title2 h2 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Monserrat", sans-serif;
+}
+@media (max-width: 767px) {
+  main .services2 section.parallax-window .container .services2__article .services2__article_title .article__title2 h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  main .services2 section.parallax-window .container .services2__article .services2__article_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs {
+  margin-bottom: 40px;
+  max-width: 100%;
+  min-width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph1 {
+  margin-top: 50px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph1 .graphs__graph1_title {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph1 .graphs__graph1_title .graph1__title1 h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph1 .graphs__graph1_title .graph1__title2 h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph1 .graph1_diogramm {
+  max-width: 100%;
+  border-radius: 50px;
+  background-color: white;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph1 .graph1_diogramm1 {
+  max-width: 40%;
+  min-height: 13px;
+  background-color: #2b2b2b;
+  border-radius: 50px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 {
+  margin-top: 50px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 .graphs__graph2_title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 .graphs__graph2_title .graph2__title1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 .graphs__graph2_title .graph2__title1 h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 .graphs__graph2_title .graph2__title2 h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 .graph2_diogramm {
+  max-width: 100%;
+  min-height: 13px;
+  border-radius: 50px;
+  background-color: white;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph2 .graph2_diogramm1 {
+  max-width: 75%;
+  min-height: 13px;
+  background-color: #2b2b2b;
+  border-radius: 50px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph3 {
+  margin-top: 50px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph3 .graphs__graph3_title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph3 .graphs__graph3_title .graph3__title1 h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph3 .graphs__graph3_title .graph3__title2 h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph3 .graph3_diogramm {
+  max-width: 100%;
+  min-height: 13px;
+  border-radius: 50px;
+  background-color: white;
+}
+main .services2 section.parallax-window .container .services2__article .services2__graphs .services2__graphs_graph3 .graph3_diogramm1 {
+  max-width: 75%;
+  min-height: 13px;
+  background-color: #2b2b2b;
+  border-radius: 50px;
+}
+main .services3 section.parallax-window {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  main .services3 section.parallax-window {
+    height: 180vh;
+  }
+}
+@media (max-width: 400px) {
+  main .services3 section.parallax-window {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 180vh;
+  }
+}
+main .services3 section.parallax-window .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  main .services3 section.parallax-window .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main .services3 section.parallax-window .container .services3__article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article {
+    width: 570px;
+    height: 320px;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block1 {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+  border: 2.5px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers {
+    width: 160px;
+    height: 160px;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers .customers_icon {
+  background-image: url("../img/building.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 40px;
+  max-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers .customers_title {
+  font-family: "Monserrat", sans-serif;
+  font-size: 24px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers .customers_text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:hover {
+  transition: all 0.6s ease;
+  background-color: white;
+  border: 2.5px solid white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:hover .customers_title {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:hover .customers_text {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:hover .customers_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/building2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:not(:hover) {
+  transition: all 0.6s ease;
+  background-color: transparent;
+  border: 2.5px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:not(:hover) .customers_title {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:not(:hover) .customers_text {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__customers:not(:hover) .customers_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/building.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+  border: 2.5px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects {
+    width: 160px;
+    height: 160px;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects .projects_icon {
+  background-image: url("../img/calculator.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects .projects_title {
+  font-family: "Monserrat", sans-serif;
+  font-size: 24px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects .projects_text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:hover {
+  transition: all 0.6s ease;
+  background-color: white;
+  border: 2.5px solid white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:hover .projects_title {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:hover .projects_text {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:hover .projects_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/calculator2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:not(:hover) {
+  transition: all 0.6s ease;
+  background-color: transparent;
+  border: 2.5px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:not(:hover) .projects_title {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:not(:hover) .projects_text {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects:not(:hover) .projects_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/calculator.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 160px;
+  max-height: 160px;
+  border: 2.5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2 {
+    width: 160px;
+    height: 160px;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2 .projects2_icon {
+  background-image: url("../img/list.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2 .projects2_title {
+  font-family: "Monserrat", sans-serif;
+  font-size: 24px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2 .projects2_text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:hover {
+  transition: all 0.6s ease;
+  background-color: white;
+  border: 2.5px solid white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:hover .projects2_title {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:hover .projects2_text {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:hover .projects2_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/list2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:not(:hover) {
+  transition: all 0.6s ease;
+  background-color: transparent;
+  border: 2.5px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:not(:hover) .projects2_title {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:not(:hover) .projects2_text {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block1 .services3__projects2:not(:hover) .projects2_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/list.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block2 {
+    width: 380px;
+  }
+}
+@media (max-width: 400px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+  border: 2.5px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3 {
+    width: 160px;
+    height: 160px;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3 .projects3_icon {
+  background-image: url("../img/calculator.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3 .projects3_title {
+  font-family: "Monserrat", sans-serif;
+  font-size: 24px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3 .projects3_text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:hover {
+  transition: all 0.6s ease;
+  background-color: white;
+  border: 2.5px solid white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:hover .projects3_title {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:hover .projects3_text {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:hover .projects3_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/calculator2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:not(:hover) {
+  transition: all 0.6s ease;
+  background-color: transparent;
+  border: 2.5px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:not(:hover) .projects3_title {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:not(:hover) .projects3_text {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects3:not(:hover) .projects3_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/calculator.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+  border: 2.5px;
+  cursor: pointer;
+}
+@media (max-width: 1920000px) {
+  main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4 {
+    width: 160px;
+    height: 160px;
+  }
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4 .projects4_icon {
+  background-image: url("../img/list.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4 .projects4_title {
+  font-family: "Monserrat", sans-serif;
+  font-size: 24px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4 .projects4_text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:hover {
+  transition: all 0.6s ease;
+  background-color: white;
+  border: 2.5px solid white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:hover .projects4_title {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:hover .projects4_text {
+  transition: all 0.6s ease;
+  color: #2b2b2b;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:hover .projects4_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/list2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:not(:hover) {
+  transition: all 0.6s ease;
+  background-color: transparent;
+  border: 2.5px;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:not(:hover) .projects4_title {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:not(:hover) .projects4_text {
+  transition: all 0.6s ease;
+  color: white;
+}
+main .services3 section.parallax-window .container .services3__article .services3__article_block2 .services3__projects4:not(:hover) .projects4_icon {
+  transition: all 0.6s ease;
+  background-image: url("../img/list.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+@media (max-width: 767px) {
+  #contact section.contact {
+    height: 150vh;
+  }
+}
+
+ul.pricing-features {
+  line-height: 1.8;
+}
+ul.pricing-features li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  opacity: 0.8;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h4.pricing-heading {
+  font-family: "Montserrat", sans-serif;
+  padding: 8px 0px;
+  color: white;
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+p.pricing-detail {
+  margin: 0 0 10px;
+  padding: 12px 0 0;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.pricing-card {
+  padding: 15px 15px 15px 15px !important;
+}
+
+h6.price-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  color: white;
+}
+h6.price-text span {
+  font-size: 14px;
+  margin-left: 6px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.line {
+  width: 100%;
+  border: 0.3px dashed white;
+}
+
+.line-through {
+  height: 400px;
+  border: 0.3px dashed white;
+  width: 0;
+}
+@media (max-width: 767px) {
+  .line-through {
+    display: none;
+  }
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.review-box {
+  padding: 25px 25px 80px !important;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+
+.user-comment {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.comment-date {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+ul.review-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.review-stars li {
+  margin-right: 5px;
+}
+ul.review-stars li:last-child {
+  margin-right: 0 !important;
+}
+
+.user-img {
+  position: absolute;
+  top: 235px;
+  left: 36%;
+}
+.user-img img {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 3px;
+  color: white;
+}
+
+.user-designation {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.contact-title {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: white;
+}
+.contact-title strong {
+  font-weight: 700;
+}
+
+.contact-text {
+  margin-bottom: 20px;
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+input {
+  border-bottom: 1px solid #FFFFFF;
+  outline: none;
+  color: white;
+  color: white;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  border-bottom: 1px solid #FFFFFF;
+  outline: none;
+  color: white;
+  color: white;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[placeholder] {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.btn-contact {
+  background-color: white;
+  font-size: 14px;
+  border: solid 1px white;
+  padding: 5px 30px;
+  color: #2b2b2b;
+  transition: 0.8s ease;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 15px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.btn-contact:hover {
+  background-color: #00bcd4;
+  border: solid 1px #00bcd4;
+  color: #FFFFFF;
+}
+
+h4.contact-heading {
+  color: white;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+h4.contact-heading strong {
+  font-weight: 700;
+}
+
+p.contact-address {
+  font-size: 16px;
+  color: white;
+  opacity: 0.8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+ul.contact-list li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  list-style: none;
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+ul.contact-list li:nth-child(1) {
+  margin-bottom: 5px;
+}
+ul.contact-list li:nth-child(3) {
+  margin-bottom: 5px;
+}
+ul.contact-list li:last-child {
+  margin-bottom: 50px;
+}
+
+ul.social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+ul.social li {
+  margin-right: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  transition: 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.social li:hover {
+  background-color: white;
+  border-radius: 100%;
+}
+ul.social li a i {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #FFFFFF;
+  transition: 0.8s ease;
+  width: 23px;
+  height: 23px;
+  border-radius: 100px;
+  text-align: center;
+}
+ul.social li a i:hover {
+  color: black;
+}
+
+section.footer {
+  padding: 120px 0px;
+  text-align: center !important;
+}
+
+ul.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.footer-social li {
+  margin-right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.footer-social li:hover {
+  background-color: #00bcd4;
+  border-radius: 100%;
+}
+ul.footer-social li:hover a i:hover {
+  color: white;
+}
+ul.footer-social li a i {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #2b2b2b;
+  transition: 0.4s ease;
+  width: 23px;
+  height: 23px;
+  border-radius: 100px;
+  text-align: center;
+}
